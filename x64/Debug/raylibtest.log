@@ -1,0 +1,10 @@
+﻿  Actor.cpp
+  Game.cpp
+  Engine.cpp
+  Main.cpp
+  Player.cpp
+  SpriteComponent.cpp
+  Generating Code...
+  raylibtest.vcxproj -> D:\Dev\raylibtest\x64\Debug\raylibtest.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
