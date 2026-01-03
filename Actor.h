@@ -2,6 +2,7 @@
 #include <raylib.h>
 #include<vector>
 #include<memory>
+#include<iostream>
 #include"Component.h"
 
 class Component;
@@ -17,6 +18,7 @@ public:
 
     void Init()
     {
+        std::cout << "init actors" << std::endl;
         InitComponents();
         OnInit();
     }
@@ -54,21 +56,26 @@ protected:
     virtual void OnDestroy() {};
     virtual void Draw() = 0;
     friend class Engine;
-    std::vector<std::unique_ptr<Component>> components{};
+    std::vector<std::unique_ptr<Component>> components;
 
 private:
     void InitComponents()
     {
-        
+        std::cout << "Init components" << std::endl;
+        for (auto& c : components)
+            c->Init();
     }
 
     void UpdateComponents(float dt)
     {
-        
+        for (auto& c : components)
+            c->Update(dt);
     }
 
     void DestroyComponents()
     {
-         
+        for (auto& comp : components) {
+            comp->Destroy();  // Calls your Component's Destroy() method
+        }
     }
 };

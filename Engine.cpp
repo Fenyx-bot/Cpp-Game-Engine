@@ -7,11 +7,8 @@ Engine::Engine(){
 	
 }
 
-Engine::~Engine() {
-	Destroy();
-}
-
 void Engine::AddActor(std::unique_ptr<Actor> actor) {
+	actor->Init();
 	actors.push_back(std::move(actor));
 }
 
@@ -61,6 +58,7 @@ void Engine::Init() {
 	UnloadImage(checkedIm);
 
 	for (auto& actor : actors) {
+		std::cout << actor << std::endl;
 		actor->Init();
 	}
 
@@ -91,4 +89,14 @@ void Engine::Destroy() {
 
 Vector2 Engine::GetWindowSize() {
 	return Engine::screenSize;
+}
+
+Engine::~Engine() {
+	// Make sure actors are destroyed before the engine fully destructs
+	for (auto& actor : actors) {
+		actor->Destroy();
+	}
+	actors.clear();
+
+	Destroy();
 }
