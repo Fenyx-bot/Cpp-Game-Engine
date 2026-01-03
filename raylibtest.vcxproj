@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="AnimatedSpriteComponent.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="AnimatedSpriteComponent.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="DrawableComponent.h" />
     <ClInclude Include="Engine.h" />

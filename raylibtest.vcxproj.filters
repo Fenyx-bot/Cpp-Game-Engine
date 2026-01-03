@@ -42,14 +42,14 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Actor.cpp">
-      <Filter>Source Files\Core\Actors</Filter>
-    </ClCompile>
     <ClCompile Include="SpriteComponent.cpp">
       <Filter>Source Files\Core\Components</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Core\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedSpriteComponent.cpp">
+      <Filter>Source Files\Core\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +75,9 @@
       <Filter>Header Files\Core\Components</Filter>
     </ClInclude>
     <ClInclude Include="SpriteComponent.h">
+      <Filter>Header Files\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedSpriteComponent.h">
       <Filter>Header Files\Core\Components</Filter>
     </ClInclude>
   </ItemGroup>

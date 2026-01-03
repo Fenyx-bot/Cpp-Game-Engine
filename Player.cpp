@@ -1,9 +1,10 @@
 #include "Player.h"
 #include "Engine.h"
 #include "SpriteComponent.h"
+#include "AnimatedSpriteComponent.h"
 
 Player::Player() {
-	AddComponent<SpriteComponent>("emir.png");
+	AddComponent<AnimatedSpriteComponent>("Horse1.gif", 0);
 	std::cout << "Adding player sprite!" << std::endl;
 	Position = { 100, 100 };
 	Size = { 32, 32 };
